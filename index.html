@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#071018">
+<title>J.A.R.V.I.S. — AI Assistant</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">J</span><span><b>J.A.R.V.I.S.</b><small>PERSONAL INTELLIGENCE</small></span></a>
+  <div class="status"><span class="status-dot"></span><span id="statusText">СИСТЕМА ГОТОВА</span></div>
+</header>
+<main class="layout">
+  <section class="hero">
+    <div class="eyebrow"><span></span> PERSONAL AI INTERFACE</div>
+    <h1>Чем могу<br><em>помочь?</em></h1>
+    <p class="subtitle">Ваш интеллектуальный помощник. Задавайте вопросы текстом или голосом.</p>
+    <div class="reactor-wrap" aria-label="Анимированный реактор">
+      <div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="orbit orbit-3"></div>
+      <div class="reactor"><div class="reactor-core"></div></div>
+      <div class="reactor-caption"><span class="pulse"></span> NEURAL CORE <b>ONLINE</b></div>
+    </div>
+    <div class="mini-stats">
+      <div><small>РЕЖИМ</small><b>ASSISTANT</b></div>
+      <div><small>ИНТЕРФЕЙС</small><b>VOICE + TEXT</b></div>
+      <div><small>ЛОКАЛЬНОЕ ВРЕМЯ</small><b id="clock">--:--:--</b></div>
+    </div>
+  </section>
+  <section class="chat-panel">
+    <div class="panel-head"><div><span class="tiny-label">SECURE CHANNEL</span><h2>Диалог с JARVIS</h2></div><button id="clearBtn" class="icon-btn" title="Очистить диалог" aria-label="Очистить диалог">↺</button></div>
+    <div id="messages" class="messages" aria-live="polite">
+      <div class="message assistant"><div class="avatar">J</div><div class="bubble"><span class="sender">JARVIS <small>СЕЙЧАС</small></span><p>Добрый день. Я готов к работе. Что вас интересует?</p></div></div>
+    </div>
+    <div class="suggestions">
+      <button data-prompt="Расскажи, что ты умеешь">Что ты умеешь?</button>
+      <button data-prompt="Помоги составить план на день">План на день</button>
+      <button data-prompt="Объясни сложную тему простыми словами">Объясни тему</button>
+    </div>
+    <form id="chatForm" class="composer">
+      <textarea id="prompt" rows="1" maxlength="5000" placeholder="Напишите сообщение..." aria-label="Ваше сообщение"></textarea>
+      <button type="button" id="micBtn" class="mic-btn" title="Голосовой ввод" aria-label="Голосовой ввод">⌁</button>
+      <button type="submit" id="sendBtn" class="send-btn" aria-label="Отправить сообщение"><span>➤</span></button>
+    </form>
+    <div class="panel-foot"><span><i></i> КАНАЛ ЗАЩИЩЁН</span><span>AI CORE · BETA</span></div>
+    <p id="notice" class="notice">Для ответов ИИ серверу нужно настроить OpenAI API key.</p>
+  </section>
+</main>
+<footer>J.A.R.V.I.S. <span>·</span> PERSONAL ASSISTANT INTERFACE <span>·</span> НЕ ОФИЦИАЛЬНЫЙ ПРОДУКТ MARVEL</footer>
+<script src="/app.js"></script>
+</body>
+</html>
