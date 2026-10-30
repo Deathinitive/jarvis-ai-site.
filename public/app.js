@@ -54,7 +54,7 @@ async function sendMessage(text) {
     if (!response.ok) throw new Error(data.error || `Ошибка сервера (${response.status})`);
     const reply = data.reply || "Ответ не получен.";
     answerEl.textContent = reply; history.push({role:"assistant", content:reply});
-    $("notice").textContent = "ИИ подключён. Ответы генерируются через сервер.";
+    $("notice").textContent = "Бесплатный режим команд активен. Внешний ИИ API не используется.";
     say(reply);
   } catch (err) {
     const msg = err.message || "Не удалось связаться с сервером.";
